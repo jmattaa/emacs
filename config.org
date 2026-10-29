@@ -95,11 +95,10 @@
     :config
     (load-theme 'monokai-pro t)
     (set-face-attribute 'default nil
-  		      :background "#181618")
+		      :background "#181618")
     (set-face-attribute 'fringe nil
-  		      :background "#181618"))
+		      :background "#181618"))
 #+end_src
-
 * Evil mode
 #+begin_src elisp
   (use-package evil
@@ -155,10 +154,6 @@
     (set-face-attribute (car face) nil :font "RecMonoCasual Nerd Font" :weight 'regular :height (cdr face)))
 #+end_src
 
-* LSP
-#+begin_src elisp
-  (add-hook 'prog-mode-hook #'eglot-ensure)
-#+end_src
 * Vertico
 #+begin_src elisp
   (use-package vertico
@@ -182,4 +177,29 @@
        (internal-border-width . 0)))
     :init
     (mini-frame-mode 1))
+#+end_src
+* LSP
+** Eglot
+#+begin_src elisp
+  (add-hook 'prog-mode-hook #'eglot-ensure)
+#+end_src
+
+** Completions
+#+begin_src elisp
+  (define-key evil-insert-state-map (kbd "C-n") nil)
+  (define-key evil-insert-state-map (kbd "C-p") nil)
+  (define-key evil-insert-state-map (kbd "C-y") nil)
+
+  (use-package corfu
+    :ensure t
+    :custom
+    (corfu-auto t)
+    (corfu-cycle t)
+    :bind
+    (:map corfu-map
+  	("C-n" . corfu-next)
+  	("C-p" . corfu-previous)
+  	("C-y" . corfu-insert)))
+    :init
+    (global-corfu-mode)
 #+end_src
