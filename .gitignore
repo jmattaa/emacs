@@ -1,0 +1,16 @@
+
+auto-save-list/
+eln-cache/
+*.elc
+*.eln
+*~
+\#*\#
+.#*
+
+elpa/
+eshell/
+games/
+mason/
+
+config.el
+project.eld
