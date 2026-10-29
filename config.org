@@ -3,7 +3,7 @@
 #+STARTUP: content
 #+OPTIONS: toc
 
-* INIT
+* Init
 ** Setting stuff
 #+begin_src elisp
   ;; -*- lexical-binding: t; -*-
@@ -44,6 +44,12 @@
   (global-set-key (kbd "C-c r") #'jmattaa/rel-conf)
 #+end_src
 
+* Server
+#+begin_src elisp
+  (require 'server)
+  (unless (server-running-p)
+    (server-start))
+#+end_src
 * Package manager
 #+begin_src elisp
   (require 'package)
