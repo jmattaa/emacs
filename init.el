@@ -11,9 +11,11 @@
      default))
  '(package-selected-packages
    '(ample-theme au-themes corfu ember-theme evil exec-path-from-shell
-		 mason mini-frame org-bullets vertico vertico-posframe))
+		 mason mini-frame odin-ts-mode org-bullets vertico
+		 vertico-posframe))
  '(package-vc-selected-packages
-   '((ember-theme :url "https://github.com/ember-theme/emacs")
+   '((odin-ts-mode :url "https://github.com/Sampie159/odin-ts-mode")
+     (ember-theme :url "https://github.com/ember-theme/emacs")
      (au-themes :url "https://github.com/szymonwilczek/au-themes"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
