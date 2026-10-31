@@ -11,8 +11,8 @@
      default))
  '(package-selected-packages
    '(ample-theme au-themes corfu ember-theme evil exec-path-from-shell
-		 mason mini-frame odin-ts-mode org-bullets vertico
-		 vertico-posframe))
+		 mason mini-frame monokai-pro-theme odin-ts-mode
+		 org-bullets vertico vertico-posframe))
  '(package-vc-selected-packages
    '((odin-ts-mode :url "https://github.com/Sampie159/odin-ts-mode")
      (ember-theme :url "https://github.com/ember-theme/emacs")
